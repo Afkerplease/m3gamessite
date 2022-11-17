@@ -15,7 +15,7 @@ function Footer() {
           <h2 className=" dark:text-gray text-center mt-4">
             First Freemium H5 NFT Games
           </h2>
-          <div className=" mt-10 justify-center  flex gap-6">
+          <div className=" mt-6 justify-center  flex gap-6">
             <a
               href="https://www.facebook.com/M3.games"
               className=" text-[25px] text-gray dark:hover:text-white  hover:text-purpleSecond "
