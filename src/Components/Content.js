@@ -21,7 +21,7 @@ function Content() {
         {" "}
         Collect Gaming Assets{" "}
       </h1>
-      <p className=" dark:text-gray md:text-[30px] md:mt-2 text-center text-[20px] mt-4   ">
+      <p className=" dark:text-gray md:text-[30px] md:mt-2  text-purple text-center text-[20px] mt-4   ">
         {" "}
         Buy And Sell NFTs From Our first Collection{" "}
       </p>

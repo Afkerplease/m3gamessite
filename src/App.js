@@ -2,10 +2,16 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Content from "./Components/Content";
 import Footer from "./Components/Footer";
+import Modal from "./Components/Modal";
 import NavBar from "./Components/NavBar";
 
 function App() {
   const [theme, setTheme] = useState(null);
+  const [ModalClicked, setModalClicked] = useState(false);
+
+  const clickModal = () => {
+    setModalClicked(!ModalClicked);
+  };
   useEffect(() => {
     if (window.matchMedia(" (prefers-color-scheme:dark) ").matches) {
       setTheme("dark");
@@ -25,9 +31,10 @@ function App() {
   };
 
   return (
-    <main className=" bg-gradient-to-r from-pink dark:bg-none to-blue dark:bg-blueNuit font-Epilogue h-[100%] z-[2] ">
+    <main className=" relative bg-gradient-to-r from-pink dark:bg-none to-blue dark:bg-blueNuit font-Epilogue h-[100%]  ">
+      <NavBar click={darkModeClicked} theme={theme} modal={clickModal} />
+      {ModalClicked && <Modal click={clickModal} />}
       <div className="   container mx-auto md:w-[1440px] w-[100%] ">
-        <NavBar click={darkModeClicked} theme={theme} />
         <Content />
         <Footer />
       </div>
